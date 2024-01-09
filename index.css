@@ -1,0 +1,88 @@
+
+*{
+    box-sizing: border-box;
+    }
+    body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    margin: 20px;
+}
+
+/* Common styles for all views */
+.section {
+    position: relative;
+    border: 1px solid black;
+    margin: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #e74c3c; /* Your chosen color for section title */
+    color: white;
+    margin-left: 15px;
+    padding: 5px;
+    
+}
+
+.section-content {
+    padding-top: 26px;
+    margin: auto;
+}
+
+/* Desktop View (992px and above) */
+@media (min-width: 992px) {
+    .section {
+        width: calc(33.33% - 30px); /* Adjusted width and spacing */
+        float: left;
+    }
+}
+
+/* Tablet View (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: calc(50% - 30px); /* Adjusted width and spacing */
+        float: left;
+    }
+
+    /* Make the 3rd section take up the entire row */
+    .section:nth-child(3) {
+        width: 100%;
+        clear: both;
+    }
+}
+
+/* Mobile View (767px and below) */
+@media (max-width: 767px) {
+    .section {
+        width: 100%;
+        float: none;
+    }
+}
+
+/* Optional: Adjust font sizes */
+h1 {
+    font-size: 150%; /* 75% larger than default */
+}
+
+.section-title {
+    font-size: 125%; /* 25% larger than default */
+}
